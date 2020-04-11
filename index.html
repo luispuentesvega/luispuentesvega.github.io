@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Luis Puentes</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="profile">
+        <h1 class="profile__title">Luis Puentes</h1>
+        <h3 class="profile__subtitle">Full Stack Developer</h3>
+        <h3 class="profile__contact">
+          <a href="https://github.com/luispuentesvega">Github</a>
+        </h3>
+        <div class="profile__skills">
+          <p class="technologies"></p>
+        </div>
+        <div class="profile__info">
+          <p class="info__aditional"></p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
+    <script>
+      let _this = this;
+      new TypeIt('.technologies', {
+        speed: 90,
+        waitUntilVisible: true,
+        afterStep: function(step, queue, instance) {
+          _this.toWriteAditionalInfo();
+        }
+      })
+        .type(
+          '<span style="color: #8892BF">PHP</span>: <span style="color:#FF5D5B">Laravel</span>, <span style="color: #F8DC3D">Javascript</span> :         <span style="color: #42B983">VueJS</span>, DBs:<span style="color: #33668F">PostgreSQL</span>, <span style="color:#00758F">My</span><span style="color: #F29111">SQL</span>.'
+        )
+        .go();
+
+      function toWriteAditionalInfo() {
+        new TypeIt('.info__aditional', {
+          speed: 120,
+          waitUntilVisible: true
+        })
+          .type('Anything else... Maybe no')
+          .pause(500)
+          .delete(12)
+          .type(
+            ', Oh yes, I\'have been working with <strong style="color:#5cccec">ReactJs</strong> for 6 months'
+          )
+          .delete(1)
+          .type('<strong style="color:#5cccec">S</strong>.')
+          .options({
+            speed: 700
+          })
+          .break()
+          .options({
+            speed: 100
+          })
+          .type('It is awes')
+          .pause(10)
+          .delete(4)
+          .type('so awesome! 🚀')
+          .go();
+      }
+    </script>
+  </body>
+</html>
