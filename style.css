@@ -24,9 +24,7 @@ main {
     position: relative;
 }
 
-.profile {
-  
-}
+.profile {}
 
 .profile__title {
     font-size: 3rem;
@@ -81,7 +79,8 @@ main {
 }
 
 .social {
-    display: inline-block;~
+    display: inline-block;
+    ~
 }
 
 .social a {
@@ -113,5 +112,80 @@ a:after {
     right: -0.1em;
     bottom: 0;
     transition: top 200ms cubic-bezier(0, .8, .13, 1);
-    background-color: rgba(79,192,141,0.5);
+    background-color: rgba(79, 192, 141, 0.5);
+}
+
+/* Animation */
+
+@keyframes launch-rocket {
+    0% {
+        top: 90%;
+    }
+
+    5% {
+        top: 95%;
+    }
+
+    10% {
+        top: 80%;
+    }
+
+    25% {
+        top: 75%;
+    }
+
+    20% {
+        top: 70%;
+    }
+
+    25% {
+        top: 65%;
+    }
+
+    30% {
+        top: 60%;
+    }
+
+    35% {
+        top: 55%;
+    }
+
+    40% {
+        top: 50%;
+    }
+
+    50% {
+        top: 40%;
+    }
+
+    60% {
+        top: 30%;
+    }
+
+    70% {
+        top: 20%;
+    }
+
+    80% {
+        top: 10%;
+    }
+
+    90% {
+        top: 0%;
+    }
+
+    100% {
+        top: -10%;
+    }
+}
+
+.rocket {
+    animation-name: launch-rocket;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
